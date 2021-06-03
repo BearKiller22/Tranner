@@ -1,0 +1,23 @@
+@mixin flex($spacing : none,$direction : row){
+    display:flex;
+    @if $direction == column{
+        flex-direction: column;
+    }
+    @if $spacing == between{
+        justify-content: space-between;
+    }
+    @else if $spacing == around{
+        justify-content: space-around;
+    }
+    @else if $spacing == center{
+        justify-content:center;
+    }
+    align-items:center;
+}
+// @mixin headerFontStyle{
+//   text-shadow: 1px 0px 12px #8316a6;
+//   //text-shadow: 0 1px 4px #69d9e8;
+//   -webkit-text-stroke: 1px #4c797f;
+// 
+// 
+// }
